@@ -11,7 +11,6 @@ spring:
   liquibase:
     change-log: classpath:liquibase/translates-changelog.xml
 
-
 services:
   translate:
     url: http://localhost:8091
