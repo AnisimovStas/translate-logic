@@ -1,0 +1,16 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: logic
+  datasource:
+    url: jdbc:postgresql://${USERS.DB.URL}:5432/translates
+    username: ${USERS.DB.USERNAME}
+    password: ${USERS.DB.PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:liquibase/translates-changelog.xml
+
+services:
+  translate:
+    url: http://localhost:8091
